@@ -158,7 +158,7 @@ const NetworkModify: FunctionalComponent = (props: any) => {
           <input
             id="networkAlgodUrl"
             class="input"
-            placeholder="https://mainnet-algorand.api.purestake.io/ps2"
+            placeholder="https://mainnet-api.algonode.cloud"
             value=${networkAlgodUrl}
             onInput=${(e) => setNetworkAlgodUrl(e.target.value)}
           />
@@ -166,7 +166,7 @@ const NetworkModify: FunctionalComponent = (props: any) => {
           <input
             id="networkIndexerUrl"
             class="input"
-            placeholder="https://mainnet-algorand.api.purestake.io/idx2"
+            placeholder="https://mainnet-idx.algonode.cloud"
             value=${networkIndexerUrl}
             onInput=${(e) => setNetworkIndexerUrl(e.target.value)}
           />

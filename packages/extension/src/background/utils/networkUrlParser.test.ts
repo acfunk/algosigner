@@ -28,8 +28,8 @@ test.each(portURLs)(
 );
 
 const pathURLs = [
-    ['https://betanet-algorand.api.purestake.io/ps2','https://betanet-algorand.api.purestake.io/ps2',''],
-    ['https://betanet-algorand.api.purestake.io/idx2','https://betanet-algorand.api.purestake.io/idx2',''],
+    ['https://betanet-api.algonode.cloud','https://betanet-api.algonode.cloud',''],
+    ['https://betanet-idx.algonode.cloud','https://betanet-idx.algonode.cloud',''],
 ];
 test.each(pathURLs)(
     'Validate URLs with paths (%s)',

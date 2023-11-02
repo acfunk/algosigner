@@ -156,8 +156,8 @@ async function getLedgerSuggestedParams(ledger = 'TestNet') {
 }
 
 async function getSDKSuggestedParams() {
-  const algodServer = 'https://testnet-algorand.api.purestake.io/ps2';
-  const token = { 'X-API-Key': 'B3SU4KcVKi94Jap2VXkK83xx38bsv95K5UZm2lab' };
+  const algodServer = 'https://testnet-api.algonode.cloud';
+  const token = '';
   const algodClient = new algosdk.Algodv2(token, algodServer, '');
 
   const params = await algodClient.getTransactionParams().do();

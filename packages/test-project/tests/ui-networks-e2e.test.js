@@ -31,9 +31,9 @@ describe('Wallet Setup', () => {
 describe('Create and Test Custom Networks', () => {
   const NetworkConfig = {
     name: 'E2ENet',
-    algod: 'https://betanet-algorand.api.purestake.io/ps2',
-    indexer: 'https://betanet-algorand.api.purestake.io/idx2',
-    headers: '{"Algod":{"x-api-key":"yiMMSnme3SE0CmZZARJW87yWHTXZrEGaNSJNx2Me"},"Indexer":{"x-api-key":"yiMMSnme3SE0CmZZARJW87yWHTXZrEGaNSJNx2Me"}}',
+    algod: 'https://betanet-api.algonode.cloud',
+    indexer: 'https://betanet-idx.algonode.cloud',
+    headers: '',
   };
 
   const e2eNetSelector = `button#select${NetworkConfig.name}`;
