@@ -4,6 +4,7 @@ import { isBaseSupportedNetwork } from '@algosigner/common/utils';
 
 import TxTemplate from './Common/TxTemplate';
 import ContactPreview from 'components/ContactPreview';
+import { getExploreBaseUrl } from 'services/common';
 
 const TxAxfer: FunctionalComponent = (props: any) => {
   const { tx, account, contact, network, vo, dt, estFee, da, un, msig, authAddr } = props;
@@ -14,9 +15,7 @@ const TxAxfer: FunctionalComponent = (props: any) => {
     assetIndex = html`
       <a
         style="width: 70%"
-        href=${`https://goalseeker.purestake.io/algorand/${network.toLowerCase()}/asset/${
-          tx.assetIndex
-        }`}
+        href=${getExploreBaseUrl(network)}/asset/${tx.assetIndex}
         target="_blank"
         rel="noopener noreferrer"
       >

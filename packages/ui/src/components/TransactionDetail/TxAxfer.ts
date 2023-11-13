@@ -1,5 +1,6 @@
 import { html } from 'htm/preact';
 import { FunctionalComponent } from 'preact';
+import { getExploreBaseUrl } from 'services/common';
 
 const TxAxfer: FunctionalComponent = (props: any) => {
   const { tx, ledger } = props;
@@ -32,13 +33,13 @@ const TxAxfer: FunctionalComponent = (props: any) => {
       </p>
       <div class="has-text-centered">
         <a
-          href=${`https://goalseeker.purestake.io/algorand/${ledger.toLowerCase()}/transaction/${
+          href=${getExploreBaseUrl(ledger)}/transaction/${
             tx.id
-          }`}
+          }
           target="_blank"
           rel="noopener noreferrer"
         >
-          See details in GoalSeeker
+          See details in DappFlow
         </a>
       </div>
     </div>

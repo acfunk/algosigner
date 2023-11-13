@@ -2,6 +2,7 @@ import { html } from 'htm/preact';
 import { FunctionalComponent } from 'preact';
 import TxTemplate from './Common/TxTemplate';
 import { isBaseSupportedNetwork } from '@algosigner/common/utils';
+import { getExploreBaseUrl } from 'services/common';
 
 const TxAfrz: FunctionalComponent = (props: any) => {
   const { tx, account, network, vo, estFee, msig, authAddr } = props;
@@ -14,9 +15,7 @@ const TxAfrz: FunctionalComponent = (props: any) => {
     assetIndex = html`
       <a
         style="width: 70%"
-        href=${`https://goalseeker.purestake.io/algorand/${network.toLowerCase()}/asset/${
-          tx.assetIndex
-        }`}
+        href=${getExploreBaseUrl(network)}/asset/${tx.assetIndex}
         target="_blank"
         rel="noopener noreferrer"
       >

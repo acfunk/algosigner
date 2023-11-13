@@ -45,3 +45,8 @@ export function getNamespaceIcon(namespace: Namespace, active: boolean) {
   };
   return icons[namespace][active ? 1 : 0];
 }
+
+export function getExploreBaseUrl(ledger: string): string {
+  const exploreNetwork = ledger === 'MainNet' ? 'algonode_mainnet' : ledger === 'TestNet' ? 'algonode_testnet' : 'sandbox'
+  return `https://app.dappflow.org/setnetwork?name=${exploreNetwork}&redirect=explorer/`
+}

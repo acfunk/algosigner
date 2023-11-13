@@ -3,6 +3,7 @@ import { html } from 'htm/preact';
 import { useState, useEffect } from 'preact/hooks';
 import { JsonRpcMethod } from '@algosigner/common/messaging/types';
 
+import { getExploreBaseUrl } from 'services/common';
 import { sendMessage } from 'services/Messaging';
 
 import ToClipboard from 'components/ToClipboard';
@@ -76,13 +77,11 @@ const AssetDetails: FunctionalComponent = (props: any) => {
         </p>
         <div class="has-text-centered is-flex is-flex-direction-column mt-3">
           <a
-            href=${`https://goalseeker.purestake.io/algorand/${ledger.toLowerCase()}/asset/${
-              asset['asset-id']
-            }`}
+            href=${getExploreBaseUrl(ledger)}/asset/${asset['asset-id']}
             target="_blank"
             rel="noopener noreferrer"
           >
-            See details in GoalSeeker
+            See details in DappFlow
           </a>
           ${!(asset.amount > 0) && html`<a id="assetOptOut" onClick=${optOutFn}>Opt-out of this asset</a>`}
         </div>

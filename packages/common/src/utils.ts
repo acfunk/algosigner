@@ -21,7 +21,7 @@ export function removeEmptyFields(obj: { [index: string]: any }): any {
 }
 
 /**
- * Check if a network belongs to our base supported network (e.g: links to GoalSeeker)
+ * Check if a network belongs to our base supported network (e.g: links to DappFlow)
  * @param network 
  * @returns boolean
  */

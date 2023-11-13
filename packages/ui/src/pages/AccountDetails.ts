@@ -10,6 +10,7 @@ import { StoreContext } from 'services/StoreContext';
 
 import Authenticate from 'components/Authenticate';
 import ToClipboard from 'components/ToClipboard';
+import { getExploreBaseUrl } from 'services/common';
 
 const AccountDetails: FunctionalComponent = (props: any) => {
   const { ledger, address } = props;
@@ -62,7 +63,6 @@ const AccountDetails: FunctionalComponent = (props: any) => {
   qr.addData(address);
   qr.make();
   const qrImg = qr.createDataURL(10, 1);
-  const ledgerName = ledger.toLowerCase();
 
   return html`
     <div class="px-4 py-3">
@@ -99,9 +99,9 @@ const AccountDetails: FunctionalComponent = (props: any) => {
                   style="cursor: pointer;"
                   class="has-tooltip-arrow has-tooltip-right has-tooltip-fade has-tooltip-primary ml-1"
                   target="_blank"
-                  href=${`https://goalseeker.purestake.io/algorand/${ledgerName}/application/${oia.id}`}
-                  data-tooltip="View on GoalSeeker"
-                  aria-label="view address info on goal seeker"
+                  href=${getExploreBaseUrl(ledger)}/application/${oia.id}
+                  data-tooltip="View on DappFlow"
+                  aria-label="view address info on dappflow"
                 >
                   <i class="fas fa-external-link-alt has-text-link-dark px-1"></i>
                 </a>
@@ -130,9 +130,9 @@ const AccountDetails: FunctionalComponent = (props: any) => {
                   style="cursor: pointer;"
                   class="has-tooltip-arrow has-tooltip-right has-tooltip-fade has-tooltip-primary ml-1"
                   target="_blank"
-                  href=${`https://goalseeker.purestake.io/algorand/${ledgerName}/asset/${cas.index}`}
-                  data-tooltip="View on GoalSeeker"
-                  aria-label="view address info on goal seeker"
+                  href=${getExploreBaseUrl(ledger)}/asset/${cas.index}
+                  data-tooltip="View on DappFlow"
+                  aria-label="view address info on dappflow"
                 >
                   <i class="fas fa-external-link-alt has-text-link-dark px-1"></i>
                 </a>
@@ -155,9 +155,9 @@ const AccountDetails: FunctionalComponent = (props: any) => {
                   style="cursor: pointer;"
                   class="has-tooltip-arrow has-tooltip-right has-tooltip-fade has-tooltip-primary ml-1"
                   target="_blank"
-                  href=${`https://goalseeker.purestake.io/algorand/${ledgerName}/application/${cap.id}`}
-                  data-tooltip="View on GoalSeeker"
-                  aria-label="view address info on goal seeker"
+                  href=${getExploreBaseUrl(ledger)}/application/${cap.id}
+                  data-tooltip="View on DappFlow"
+                  aria-label="view address info on dappflow"
                 >
                   <i class="fas fa-external-link-alt has-text-link-dark px-1"></i>
                 </a>

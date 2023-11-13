@@ -4,6 +4,7 @@ import { useState } from 'preact/hooks';
 import { route } from 'preact-router';
 import { JsonRpcMethod } from '@algosigner/common/messaging/types';
 
+import { getExploreBaseUrl } from 'services/common';
 import { sendMessage } from 'services/Messaging';
 
 import Authenticate from 'components/Authenticate';
@@ -84,13 +85,11 @@ const AddAssetConfirm: FunctionalComponent = (props: any) => {
 
         <div class="has-text-centered mt-3">
           <a
-            href=${`https://goalseeker.purestake.io/algorand/${ledger.toLowerCase()}/asset/${
-              asset['asset_id']
-            }`}
+            href=${getExploreBaseUrl(ledger)}/asset/${asset['asset_id']}
             target="_blank"
             rel="noopener noreferrer"
           >
-            See asset details in GoalSeeker
+            See asset details in DappFlow
           </a>
         </div>
 
@@ -114,11 +113,11 @@ const AddAssetConfirm: FunctionalComponent = (props: any) => {
         <b>Transaction sent!</b>
         <div class="mt-3">
           <a
-            href=${`https://goalseeker.purestake.io/algorand/${ledger.toLowerCase()}/transaction/${txId}`}
+          href=${getExploreBaseUrl(ledger)}/transaction/${txId}
             target="_blank"
             rel="noopener noreferrer"
           >
-            See transaction details in GoalSeeker
+            See transaction details in DappFlow
           </a>
         </div>
         <button

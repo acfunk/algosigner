@@ -80,11 +80,11 @@ exports[`AssetDetails should match snapshot 1`] = `
     className="has-text-centered is-flex is-flex-direction-column mt-3"
   >
     <a
-      href="https://goalseeker.purestake.io/algorand/testnet/asset/12007988"
+      href="https://app.dappflow.org/setnetwork?name=algonode_testnet&redirect=explorer/asset/12007988"
       rel="noopener noreferrer"
       target="_blank"
     >
-      See details in GoalSeeker
+      See details in DappFlow
     </a>
   </div>
 </div>
